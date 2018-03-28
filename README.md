@@ -3,6 +3,7 @@
 #### Settings
 
 * PHP 7.1
+* [PHPUnit requirements](https://phpunit.readthedocs.io/en/latest/installation.html#requirements)
 
 #### Installation
 
