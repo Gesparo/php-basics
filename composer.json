@@ -1,0 +1,16 @@
+{
+    "name": "gesparo/php-basics",
+    "description": "Learning php basic language",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Gesparo"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "^7.0"
+    }
+}
