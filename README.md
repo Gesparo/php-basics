@@ -18,11 +18,7 @@ composer install
 
 #### Workflow
 
-Project has not been configured yet, so use 
+To run all tests use command: 
 ```
 vendor/phpunit/phpunit/phpunit 
-```
-to run each test. For example you can run command bellow to figured out that all configured correct:
-```
-vendor/phpunit/phpunit/phpunit tests/ExampleTest
 ```
