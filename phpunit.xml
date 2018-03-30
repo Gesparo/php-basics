@@ -3,5 +3,8 @@
         <testsuite name="main">
             <directory>tests</directory>
         </testsuite>
+        <testsuite name="array">
+            <directory>tests/Array</directory>
+        </testsuite>
     </testsuites>
 </phpunit>
