@@ -6,6 +6,7 @@
  * Time: 8:00
  */
 
+use PHPUnit\Framework\Error\Warning;
 use PHPUnit\Framework\TestCase;
 
 class ArrayChangeKeyCaseTest extends TestCase
@@ -53,5 +54,35 @@ class ArrayChangeKeyCaseTest extends TestCase
                 ['SOME' => 1, 'FOO' => 2, 'BAR' => 3, 'BAZZ' => 4, 'AKK1' => 5]
             ],
         ];
+    }
+
+    /**
+     * @test
+     */
+    public function throw_warning_if_first_param_is_null()
+    {
+        $this->expectException(Warning::class);
+
+        array_change_key_case(null);
+    }
+
+    /**
+     * @test
+     */
+    public function throw_warning_if_first_param_is_zero()
+    {
+        $this->expectException(Warning::class);
+
+        array_change_key_case(0);
+    }
+
+    /**
+     * @test
+     */
+    public function throw_warning_if_first_param_is_empty_string()
+    {
+        $this->expectException(Warning::class);
+
+        array_change_key_case('');
     }
 }
