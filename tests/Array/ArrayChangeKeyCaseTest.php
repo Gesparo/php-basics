@@ -85,4 +85,12 @@ class ArrayChangeKeyCaseTest extends TestCase
 
         array_change_key_case('');
     }
+
+    /**
+     * @test
+     */
+    public function can_not_convert_unicode_keys()
+    {
+        $this->assertArrayNotHasKey( 'заголовок', array_change_key_case(['Заголовок' => 1]), 'There is no such key in array');
+    }
 }
