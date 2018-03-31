@@ -93,4 +93,21 @@ class ArrayChangeKeyCaseTest extends TestCase
     {
         $this->assertArrayNotHasKey( 'заголовок', array_change_key_case(['Заголовок' => 1]), 'There is no such key in array');
     }
+
+    /**
+     * @test
+     */
+    public function change_result_value_if_some_of_keys_will_be_the_same()
+    {
+        $this->assertEquals(['key' => 3], array_change_key_case(['key' => 1, 'Key' => 2, 'KEY' => 3]));
+    }
+
+    /**
+     * @test
+     */
+    public function return_false_if_input_array_is_not_array()
+    {
+        $this->expectException(Warning::class);
+        $this->assertFalse(array_change_key_case(''));
+    }
 }
