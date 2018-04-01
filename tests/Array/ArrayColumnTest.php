@@ -100,6 +100,15 @@ class ArrayColumnTest extends TestCase
                 ],
                 null
             ],
+            //incorrect column_key
+            [
+                [],
+                [
+                    ['a' => 1, 'b' => 2],
+                    ['a' => 3, 'b' => 4],
+                ],
+                'c'
+            ],
         ];
     }
 
@@ -174,6 +183,19 @@ class ArrayColumnTest extends TestCase
                 ],
                 null,
                 'b'
+            ],
+            // incorrect index key
+            [
+                [
+                    ['a' => 1, 'b' => 2],
+                    ['a' => 3, 'b' => 4],
+                ],
+                [
+                    ['a' => 1, 'b' => 2],
+                    ['a' => 3, 'b' => 4],
+                ],
+                null,
+                'c'
             ],
         ];
     }
