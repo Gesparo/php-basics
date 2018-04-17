@@ -26,4 +26,12 @@ class ArrayMapTest extends TestCase
     {
         $this->assertSame([true, true], array_map("is_numeric", [1, 1]));
     }
+
+    /**
+     * @test
+     */
+    public function few_array_will_add_to_function_step_by_step()
+    {
+        $this->assertSame([4, 6], array_map(function($n, $m) { return $n + $m; }, [1, 2], [3, 4]));
+    }
 }
